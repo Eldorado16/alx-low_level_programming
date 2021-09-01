@@ -1,17 +1,31 @@
 #include "main.h"
 /**
- * main - prints the string "Holberton" from a character array.
- * Return: 0 on success.
+ * main - entry point
+ *
+ * Return: On success 0.
  */
 int main(void)
 {
-	char c[] = "Holberton";
-	int i;
+	char hol = 'H';
 
-	for (i = 0; i < 9; i++)
-	{
-		_putchar(c[i]);
-	}
-	_putchar('\n');
+	_putchar(hol);
+	hol = 'o';
+	_putchar(hol);
+	hol = 'l';
+	_putchar(hol);
+	hol = 'b';
+	_putchar(hol);
+	hol = 'e';
+	_putchar(hol);
+	hol = 'r';
+	_putchar(hol);
+	hol = 't';
+	_putchar(hol);
+	hol = 'o';
+	_putchar(hol);
+	hol = 'n';
+	_putchar(hol);
+	_putchar(10);
+
 	return (0);
 }
