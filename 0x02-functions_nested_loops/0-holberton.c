@@ -1,17 +1,17 @@
 #include "main.h"
-
 /**
- * print_alphabet - print the alphabet
- *
- * Description: print the alphabet, in lowercase, followed by a new line
- * Return: void
+ * main - prints the string "Holberton" from a character array.
+ * Return: 0 on success.
  */
-
-void print_alphabet(void)
+int main(void)
 {
-	int c;
+	char c[] = "Holberton";
+	int i;
 
-	for (c = 'a'; c <= 'z'; ++c)
-		_putchar(c);
+	for (i = 0; i < 9; i++)
+	{
+		_putchar(c[i]);
+	}
 	_putchar('\n');
+	return (0);
 }
