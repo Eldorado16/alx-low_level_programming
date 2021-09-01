@@ -1,6 +1,4 @@
 #include "main.h"
-#include "holberton.h"
-
 /**
  * print_alphabet_x10 - prints the lowercase alphabet x10 with _putchar.
  *
