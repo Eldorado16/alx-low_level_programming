@@ -27,4 +27,3 @@ int print_sign(int n)
 		return ('/');
 	}
 }
-© 2021 GitHub, Inc.
