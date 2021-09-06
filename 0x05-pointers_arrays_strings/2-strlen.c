@@ -1,12 +1,14 @@
 #include "main.h"
-#include <stddef.h>
 
-size_t _strlen(const char *str)
+
+int _strlen(char *s)
 {
-	size_t length = 0;
+	int c = 0;
 
-	while (*str++)
-		length++;
+	for (; *s != '\0'; s++)
+	{
+		c++;
+	}
 
-	return (length);
+	return (c);
 }
