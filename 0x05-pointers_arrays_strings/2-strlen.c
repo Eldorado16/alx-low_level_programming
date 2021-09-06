@@ -1,14 +1,11 @@
 #include "main.h"
 
-int _strlen(char *s)
+size_t _strlen(const char *str)
 {
-	int len = 0;
+	size_t length = 0;
 
-	if (s)
-	{
-		while (*(s + len))
-			++len;
-	}
+	while (*str++)
+		length++;
 
-	return (len);
+	return (length);
 }
