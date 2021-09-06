@@ -1,24 +1,14 @@
 #include "main.h"
 
-
-    char *str;
-
-    str = "0123456789";
-    puts2(str);
-    str = "666";
-    puts2(str);
-    str = "#";
-    puts2(str);
-    str = "";
-    puts2(str);
 void puts2(char *str)
 {
-	if (str)
-	{
-		do {
-			if (*str)
-				_putchar(*str++);
-		} while (*str++);
-		_putchar('\n');
-	}
+	int index = 0, len = 0;
+
+	while (str[index++])
+		len++;
+
+	for (index = 0; index < len; index += 2)
+		_putchar(str[index]);
+
+	_putchar('\n');
 }
