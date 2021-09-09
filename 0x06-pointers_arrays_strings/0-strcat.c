@@ -1,25 +1,36 @@
 #include "main.h"
-#include <stdio.h>
+/**
+ * _strlen - show the lenght of a string
+ * @s: pointe to  pass the array
+ *
+ * Return: none
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+		++i;
+	return (i);
+}
 
 /**
- * _strncat - check the code for Holberton School students.
- * @dest: is a pointer type char
- * @src: is a pointer type char
- * @n: is a int variable
- * Return: Always 0.
+ * *_strcat - concatenate dos strings
+ * @dest: pointer to a string
+ * @src: pointer to the strign to concatenate
+ *
+ * Return: dest
  */
-char *_strncat(char *dest, char *src, int n)
-{
-int i, j;
-for (i = 0; *dest != 0; i++)
-dest++;
 
-for (j = 0; j < n && src[j] != 0; j++)
+char *_strcat(char *dest, char *src)
 {
-*dest = src[j];
-dest++;
-}
-*dest = '\0';
-dest -= (i + j);
-return (dest);
+	int i, a, b;
+
+	a = _strlen(dest);
+	b = _strlen(src);
+
+	for (i = 0; i <= b; i++)
+		dest[a + i] = src[i];
+
+	return (dest);
 }
