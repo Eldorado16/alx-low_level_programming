@@ -1,33 +1,53 @@
 #include "main.h"
 
 /**
- * infinite_add - adds arbitrarily long string of digits
- * @n1: the first digit string
- * @n2: the second digit string
- * @r: the result buffer
- * @size_r: the size of result buffer
- *
- * Return: char pointer to buffer
+ *infinite_add - concatenates two strings
+ *@n1: number 1
+ *@n2: number 2
+ *@r: pointer that contains sum of numbers
+ *@size_r: size of buffer that contains sum of numbers
+ *Return: the pointer with new number
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int l1 = _strlen(n1), l2 = _strlen(n2), i = 0, a, b, c = 0;
+	int longn1;
+	int longn2;
+	int bigger;
+	int op;
+	int ad;
 
-	for (l1--, l2--, size_r--; l1 >= 0 || l2 >= 0 || c; l1--, l2--, i++)
+	for (longn1 = 0; n1[longn1] != '\0'; longn1++)
+	for (longn2 = 0; n2[longn2] != '\0'; longn2++)
+	if (longn1 >= longn2)
+		bigger = longn1;
+	else
+		bigger = longn2;
+	if (size_r <= (bigger + 1))
+		return (0);
+	while (bigger > 0)
 	{
-		if (i >= size_r)
-			return (0);
-		a = 0;
-		b = 0;
-		if (l1 >= 0)
-			a = n1[l1] - '0';
-		if (l2 >= 0)
-			b = n2[l2] - '0';
-		a = a + b + c;
-		c = a / 10;
-		a %= 10;
-		r[i] = a + '0';
+		if (longn1 >= 0 && longn2 >= 0)
+		{
+			op = (*(n1 + longn1) - '0') + (*(n2 + longn2) - '0') + ad;
+		}
+		else
+		{
+			if (longn1 < 0 && longn2 >= 0)
+				op = (*(n2 + longn2) - '0') + ad;
+			else
+			{
+				if (longn1 >= 0 && longn2 < 0)
+					op = (*(n1 + longn1) - '0') + ad;
+			}
+		}
+	*(r + bigger) = (op % 10) + '0';
+	ad = op / 10;
+	longn1--;
+	longn2--;
+	bigger--;
 	}
-	r[i] = '\0';
-	return (rev_string(r));
+	if (*(r + 0) == 0)
+		return (r + 1);
+	r[bigger + 1] = '\n';
+	return (r);
 }
