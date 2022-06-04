@@ -42,5 +42,4 @@ What you should learn from this project:
 ---
 
 ## Author
-## enter_blues
-* **elias fiseha** - [malu17](https://github.com/malu17/)
+* **jonas desta** - (https://github.com/Eldorado16/)
