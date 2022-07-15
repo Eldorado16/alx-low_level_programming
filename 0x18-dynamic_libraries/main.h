@@ -1,6 +1,5 @@
-0x18. C - Dynamic libraries
-0 . libholberton.so - dynamic library libholberton.so containing all the functions listed below:
-
+#ifndef _main_H_
+#define _main_H_
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -21,5 +20,4 @@ char *_strchr(char *s, char c);
 unsigned int _strspn(char *s, char *accept);
 char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
-
-1-create_dynamic_lib.sh - script that creates a dynamic library called liball.so from all the .c files that are in the current directory.
+#endif
