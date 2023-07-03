@@ -1,13 +1,11 @@
-#ifndef HOLBERTON_H
-#define HOLBERTON_H
+#ifndef MAIN_H
+#define MAIN_H
 
-/*
- * File: main.h
- * Auth: Firdaus
- * Desc: Header file containing the prototypes of all functions
- *       included in the static library libholberton.a.
- */
-
+int get_number(int, char *);
+int is_number(char);
+int number_negative(char *);
+int contains_digit(char *);
+int compare(char *, char *);
 int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
@@ -17,7 +15,7 @@ int _isdigit(int c);
 int _strlen(char *s);
 void _puts(char *s);
 char *_strcpy(char *dest, char *src);
-int _atoi(char *s);
+int _atoi(char *);
 char *_strcat(char *dest, char *src);
 char *_strncat(char *dest, char *src, int n);
 char *_strncpy(char *dest, char *src, int n);
